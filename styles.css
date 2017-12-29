@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  //background-color: #1b182c;
+  position:relative;
+  background-color: #100e23;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.3em;
+  width:100%
+}
+
+html, body, .wrapper {
+    overflow-x:hidden;
+}
+
+@keyframes jellyfish-animate{
+  0%   {transform: rotate(20deg)}
+  100% {transform: rotate(-20deg)}
+}
+
+@keyframes jellyfish-position-animate{
+  0%   {top:400px; left: 100%; margin-left: 0px}
+  100% {top:50px; left: 0%;margin-left: -100px}
+}
+
+#bubbles{
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  overflow-x: hidden;
+}
+
+
+#jellyfish{
+  width: 50px;
+  animation-name: jellyfish-animate;
+  animation-duration: 20.0s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+#jellyfish-position{
+  position: absolute;
+  animation-name: jellyfish-position-animate;
+  animation-duration: 60s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes fish-animate{
+  0%   {transform: rotate(-3deg)}
+  100% {transform: rotate(5deg)}
+}
+
+@keyframes fish-position-animate{
+  0%   {top:300px; left: 0%;margin-left: -200px}
+  100% {top:140px; left: 100%; margin-left: 0px}
+}
+
+#fish-position{
+  position: absolute;
+  animation-name: fish-position-animate;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#fish-container{
+  animation-name: fish-animate;
+  animation-duration: 3.0s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#fish{
+  width: 100px;
+}
+
+@keyframes fish-light-animate{
+  0%   {background-color: #1b182c; box-shadow: 0px 0px 0px #100e23}
+  100% {background-color: #AAFFE4; box-shadow: 0px 0px 50px #AAFFE4}
+}
+
+#fish-light{
+  animation-name: fish-light-animate;
+  animation-duration: 3.0s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  top: 20px;
+  left: 65px;
+  position:absolute;
+  background-color: #AAFFE4;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+@keyframes fish-light-inner-animate{
+  0%   {background-color: #1b182c; box-shadow: 0px 0px 0px #100e23}
+  100% {background-color: #63F2F1; box-shadow: 0px 0px 50px #63F2F1}
+}
+
+#fish-light-inner{
+  animation-name: fish-light-inner-animate;
+  animation-duration: 3.0s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  top: 30px;
+  left: 75px;
+  position:absolute;
+  background-color: #63F2F1;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+@keyframes boat-animate{
+  0%   {transform: rotate(-3deg)}
+  100% {transform: rotate(5deg)}
+}
+
+@keyframes boat-position-animate{
+  0%   {left: 0%;margin-left: -250px}
+  100% {left: 100%; margin-left: 0px}
+}
+
+#boat-position{
+  animation-name: boat-position-animate;
+  left:95%;
+  top: 240px;
+  position: absolute;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#boat-container {
+  animation-name: boat-animate;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+#boat{
+  width:200px;
+}
+
+.propeller {
+  display:inline-block;
+  position:absolute;
+  background-color: #CBE3E7;
+  border-radius: 100%;
+  width:15px;
+  left:0px;
+}
+
+@keyframes propeller-animate{
+  0%   {height: 40px;top:50px}
+  50% {height: 10px;top:93px}
+  100% {height: 40px;top:93px;}
+}
+
+#propeller-top{
+  animation-name: propeller-animate;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+#propeller-bottom{
+  z-index: -1;
+  animation-name: propeller-animate;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.center-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: scroll-y;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+span {
+  color: #cbe3e7;
+}
+
+.madeby{
+  margin-top: 100px;
+  font-size: 0.9em;
+  color: #cbe3e7;
+}
+
+.madeby a{
+  color: #aaffe4;
+  text-decoration:underline;
+}
+
+
+@keyframes h1-animate{
+  0%  {color:#bebebe;text-shadow: 0px 0px 0px #ffffff;}
+  100% {color:#ffffff;text-shadow: 0px 0px 10px #ffffff;}
+}
+h1{
+  margin-top:260px;
+  margin-bottom:0px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 70pt;
+  display: inline-block;
+  animation-name: h1-animate;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.colorthemes{
+  margin-bottom: 30px;
+}
+
+@keyframes bubble-animate{
+    0%   {top:100vh}
+    100% {top:0vh}
+}
+
+.bubble {
+  top:100vh;
+  position: fixed;
+  animation-name: bubble-animate;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.colorrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.circle-top {
+  width: 30px;
+  height: 15px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin: 0px 10px;
+}
+
+.circle-bottom{
+  margin: 0px 10px;
+  width: 30px;
+  height: 15px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.red{background-color: #ff8080}
+.green{background-color: #95ffa4}
+.yellow{background-color: #ffe9aa}
+.blue{background-color: #91ddff}
+.magenta{background-color: #c991e1}
+.cyan{background-color: #aaffe4}
+.white{background-color: #cbe3e7}
+.black{background-color: #1b182c}
+.red-d{background-color: #ff5458}
+.green-d{background-color: #62d196}
+.yellow-d{background-color: #ffb378}
+.blue-d{background-color: #65b2ff}
+.magenta-d{background-color: #906cff}
+.cyan-d{background-color: #63f2f1}
+.black-d{background-color: #100e23}
+.white-d{background-color: #cbe3e7}
+.grey-d{background-color: #a6b3cc}
+.grey-dd{background-color: #565575}
+.grey-ddd{background-color: #2b2942}
+.fg-red{color: #ff8080}
+.fg-green{color: #95ffa4}
+.fg-yellow{color: #ffe9aa}
+.fg-blue{color: #91ddff}
+.fg-magenta{color: #c991e1}
+.fg-cyan{color: #aaffe4}
+.fg-white{color: #cbe3e7}
+.fg-black{color: #1b182c}
+.fg-red-d{color: #ff5458}
+.fg-green-d{color: #62d196}
+.fg-yellow-d{color: #ffb378}
+.fg-blue-d{color: #65b2ff}
+.fg-magenta-d{color: #906cff}
+.fg-cyan-d{color: #63f2f1}
+.fg-black-d{color: #100e23}
+.fg-white-d{color: #cbe3e7}
+.fg-grey-d{color: #a6b3cc}
+.fg-grey-dd{color: #565575}
+.fg-grey-ddd{color: #2b2942}
+
+.themes {
+  margin-top: 30px;
+  color: #cbe3e7;
+}
+.themes a{
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  text-decoration:none;
+  padding: 5px 10px;
+}
