@@ -16,6 +16,32 @@ html, body, .wrapper {
     overflow-x:hidden;
 }
 
+html::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+  background-image: radial-gradient(circle at 50% 0%,#2b283c 0%, #1b182c 25%, #100e23 40%);
+	/* -webkit-transform: translate(-50%,-50%); */
+  overflow: hidden;
+}
+
+html::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.5) 100%);
+	/* -webkit-transform: translate(-50%,-50%); */
+  overflow: hidden;
+}
+
 @keyframes jellyfish-animate{
   0%   {transform: rotate(20deg)}
   100% {transform: rotate(-20deg)}
