@@ -19,7 +19,7 @@ html, body, .wrapper {
 html::before {
 	content: "";
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: -1;
 	width: 100vw;
@@ -32,7 +32,7 @@ html::before {
 html::after{
 	content: "";
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: -1;
 	width: 100vw;
@@ -356,8 +356,11 @@ h1{
 .fg-grey-dd{color: #565575}
 .fg-grey-ddd{color: #2b2942}
 
-.themes {
+.topmargin {
   margin-top: 30px;
+}
+
+.themes {
   color: #cbe3e7;
 }
 .themes a{
